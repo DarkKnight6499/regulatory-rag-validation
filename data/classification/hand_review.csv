@@ -79,16 +79,16 @@ chunk_id,reviewer_label
 "12cfr217-d-excerpt:217.32:13",capital
 "12cfr217-d-excerpt:217.32:20",capital
 "12cfr217-d-excerpt:217.32:29",capital
-"sr11-7:II:3",model_governance
-"sr11-7:III:14",model_governance
-"sr11-7:IV:20",model_governance
-"sr11-7:V:29",model_validation
-"sr11-7:V:31",model_validation
-"sr11-7:V:47",model_validation
-"sr11-7:V:49",model_validation
-"sr11-7:V:52",model_validation
-"sr11-7:VI:70",model_governance
-"sr11-7:VI:71",model_governance
+"sr26-2:II:7",none
+"sr26-2:III:9",none
+"sr26-2:III:11",model_governance
+"sr26-2:III:14",model_governance
+"sr26-2:IV:19",model_validation
+"sr26-2:V:22",model_validation
+"sr26-2:V:27",model_validation
+"sr26-2:V:29",model_validation
+"sr26-2:VI:32",model_governance
+"sr26-2:VII:36",model_validation
 "fr2052a-instructions:FR 2052a Instructions:2",reporting
 "fr2052a-instructions:FR 2052a Instructions:7",reporting
 "fr2052a-instructions:FR 2052a Instructions:17",reporting

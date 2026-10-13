@@ -34,7 +34,7 @@ def topic_for(p: Passage) -> str | None:
     """Return the topic label for a passage, or None if the passage is excluded from the dataset."""
     if len(p.text) < MIN_CHARS or p.text.startswith(("[footnote]", "[table]")):
         return None
-    if p.doc_id == "sr11-7":
+    if p.doc_id == "sr26-2":
         return "model_validation" if p.section_path.startswith(_SR_VALIDATION_SECTIONS) else "model_governance"
     if p.doc_id == "fr2052a-instructions":
         return "reporting"

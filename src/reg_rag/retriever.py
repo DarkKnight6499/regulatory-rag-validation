@@ -65,8 +65,8 @@ def load_passages(corpus_dir: Path) -> list[Passage]:
         text = (corpus_dir / e["file"]).read_text(encoding="utf-8")
         if e["doc_id"].startswith("12cfr"):
             passages += chunk_cfr_markdown(e["doc_id"], text)
-        elif e["doc_id"] == "sr11-7":
-            passages += chunk_guidance_markdown(e["doc_id"], text, "SR 11-7")
+        elif e["doc_id"] == "sr26-2":
+            passages += chunk_guidance_markdown(e["doc_id"], text, "SR 26-2")
         elif e["doc_id"] == "fr2052a-instructions":
             passages += chunk_guidance_markdown(e["doc_id"], text, "FR 2052a Instructions")
     return passages

@@ -99,7 +99,7 @@ class ShippedCorpusTests(unittest.TestCase):
 
     def test_all_documents_chunked(self):
         docs = {p.doc_id for p in self.passages}
-        self.assertTrue({"12cfr249", "sr11-7", "fr2052a-instructions"} <= docs)
+        self.assertTrue({"12cfr249", "sr26-2", "fr2052a-instructions"} <= docs)
 
     def test_chunk_ids_unique(self):
         self.assertEqual(len({p.chunk_id for p in self.passages}), len(self.passages))
@@ -138,17 +138,17 @@ class TopicLabelTests(unittest.TestCase):
     LONG = "x " * 100
 
     def test_sr_validation_section_labelled_validation(self):
-        self.assertEqual(topic_for(_passage("sr11-7", "V. MODEL VALIDATION (a)", self.LONG)), "model_validation")
+        self.assertEqual(topic_for(_passage("sr26-2", "V. MODEL VALIDATION ", self.LONG)), "model_validation")
 
     def test_other_sr_sections_are_governance(self):
-        self.assertEqual(topic_for(_passage("sr11-7", "VI. GOVERNANCE", self.LONG)), "model_governance")
+        self.assertEqual(topic_for(_passage("sr26-2", "VI. GOVERNANCE AND CONTROLS", self.LONG)), "model_governance")
 
     def test_capital_parts(self):
         self.assertEqual(topic_for(_passage("12cfr217-b", "§ 217.20", self.LONG)), "capital")
 
     def test_short_and_footnote_text_excluded(self):
-        self.assertIsNone(topic_for(_passage("sr11-7", "I", "short")))
-        self.assertIsNone(topic_for(_passage("sr11-7", "I", "[footnote] " + self.LONG)))
+        self.assertIsNone(topic_for(_passage("sr26-2", "I", "short")))
+        self.assertIsNone(topic_for(_passage("sr26-2", "I", "[footnote] " + self.LONG)))
 
     def test_fr2052a_is_reporting(self):
         self.assertEqual(topic_for(_passage("fr2052a-instructions", "General", self.LONG)), "reporting")

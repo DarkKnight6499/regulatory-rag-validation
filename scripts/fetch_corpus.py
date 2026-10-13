@@ -24,7 +24,7 @@ from reg_rag.corpus import (  # noqa: E402
 CORPUS_DIR = ROOT / "data" / "corpus"
 ECFR_DATE = "2026-10-01"  # point-in-time eCFR version so the corpus is reproducible
 ECFR_URL = "https://www.ecfr.gov/api/versioner/v1/full/{date}/title-12.xml?{query}"
-SR117_URL = "https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf"
+SR262_URL = "https://www.federalreserve.gov/supervisionreg/srletters/SR2602a1.pdf"
 FR2052A_URL = "https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf"
 ECFR_DOCS = {
     "12cfr249": ("12 CFR Part 249 Liquidity Risk Measurement, Standards, and Monitoring (Regulation WW)", ["part=249"]),
@@ -35,14 +35,12 @@ ECFR_DOCS = {
     "12cfr217-d-excerpt": ("12 CFR Part 217 Subpart D excerpt: 217.30, 217.31, 217.32 (standardized approach risk weights)",
                            [f"part=217&section=217.{n}" for n in (30, 31, 32)]),
 }
-SR117_SUBHEADINGS = [
-    "Model Development and Implementation", "Model Use", "Key Elements of Comprehensive\nValidation",
-    "1. Evaluation of Conceptual Soundness", "2. Ongoing Monitoring", "3. Outcomes Analysis",
-    "Validation of Vendor and Other Third-Party Products", "Board of Directors and Senior Management",
-    "Policies and Procedures", "Roles and Responsibilities", "Internal Audit", "External Resources",
-    "Model Inventory", "Documentation",
+SR262_SUBHEADINGS = [
+    "Model Development", "Model Use", "Components of Model Validation", "Conceptual Soundness", "Outcomes Analysis",
+    "Ongoing Model Monitoring", "Roles and Responsibilities", "Model Inventory", "Documentation",
 ]
 PDF_DROP = [r"Page \d+( of \d+)?", r"FR 2052a Instructions"]
+SR262_DROP = [r"\d{1,2}"]  # bare page numbers in the SR 26-2 attachment
 HEADERS = {"User-Agent": "Mozilla/5.0", "Accept-Encoding": "gzip"}
 # end config
 
@@ -60,6 +58,26 @@ def get(url: str) -> bytes:
 def pdf_text(data: bytes) -> str:
     doc = pymupdf.open(stream=data, filetype="pdf")
     return "\n".join(page.get_text("text") for page in doc)
+
+
+def clean_sr262(txt: str) -> str:
+    """Move SR 26-2's three footnotes out of the body text (the PDF interleaves them at page breaks)."""
+    fn1 = re.search(r" 1 (See 12 CFR Part 4.*?management of model risk\.)", txt)
+    fn3 = re.search(r" 3 (Generative AI.*?non-agentic AI models\.)(?=\nbelow\.)", txt, re.S)
+    if not (fn1 and fn3):
+        raise ValueError("SR 26-2 footnote layout changed; check the PDF")
+    txt = txt.replace(fn1.group(0), "").replace("\nbillion in total assets.2 Models", " billion in total assets. Models")
+    txt = re.sub(r" 2 For a description of the banking organizations.*?\(12 U\.S\.C\. 1813\(q\)\)\. ", " ", txt)
+    txt = txt.replace(fn3.group(0), "").replace("\nbelow.", " below.").replace("use.3\n", "use.\n")
+    txt = txt.replace("rule- based", "rule-based").replace("out-of- time", "out-of-time")
+    out = []
+    for ln in txt.split("\n"):
+        out.append(ln)
+        if ln.startswith("There are a variety of ways"):
+            out.append("[footnote 1] " + fn1.group(1))
+        if ln.startswith("For the purposes of this guidance, the term"):
+            out.append("[footnote 3] " + fn3.group(1))
+    return "\n".join(out)
 
 
 def main() -> None:
@@ -83,18 +101,19 @@ def main() -> None:
         print(doc_id, status, len(md))
 
     try:
-        raw = get(SR117_URL)
-        txt = normalize_guidance_text(clean_pdf_text(pdf_text(raw), PDF_DROP), "I. INTRODUCTION",
-                                      r"[IVX]+\. [A-Z][A-Z ,&-]+", SR117_SUBHEADINGS)
-        out = CORPUS_DIR / "sr11-7.md"
+        raw = get(SR262_URL)
+        txt = normalize_guidance_text(clean_pdf_text(pdf_text(raw), PDF_DROP + SR262_DROP), "I. INTRODUCTION",
+                                      r"[IVX]+\. [A-Z][A-Z ,&-]+", SR262_SUBHEADINGS)
+        txt = clean_sr262(txt) + "\n"
+        out = CORPUS_DIR / "sr26-2.md"
         out.write_text(txt, encoding="utf-8")
-        entries.append(ManifestEntry("sr11-7", "SR 11-7 Attachment: Supervisory Guidance on Model Risk Management (April 4, 2011)",
-                                     out.name, [SR117_URL], today, [sha256_bytes(raw)], sha256_file(out), len(txt),
-                                     note="text extracted with PyMuPDF (markitdown reordered footnotes into the body); "
-                                          "footnotes dropped, paragraphs rebuilt, contents page removed"))
-        print("sr11-7 ok", len(txt))
+        entries.append(ManifestEntry("sr26-2", "SR 26-2 Attachment: Supervisory Guidance on Model Risk Management (April 17, 2026)",
+                                     out.name, [SR262_URL], today, [sha256_bytes(raw)], sha256_file(out), len(txt),
+                                     note="text extracted with PyMuPDF; footnotes moved out of the body, paragraphs rebuilt; "
+                                          "supersedes SR 11-7 and SR 21-8"))
+        print("sr26-2 ok", len(txt))
     except Exception as exc:
-        entries.append(ManifestEntry("sr11-7", "SR 11-7", "sr11-7.md", [SR117_URL], today, [], "", 0, "failed", repr(exc)))
+        entries.append(ManifestEntry("sr26-2", "SR 26-2", "sr26-2.md", [SR262_URL], today, [], "", 0, "failed", repr(exc)))
 
     try:
         raw = get(FR2052A_URL)

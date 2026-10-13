@@ -105,14 +105,14 @@ def main() -> None:
     answered = [(a, q) for a, q in zip(answers, questions) if not a.abstained]
     caught = mutable = 0
     for a, _ in answered:
-        passages = [h.passage for h in a.hits]
+        hit_passages = [h.passage for h in a.hits]
         text = a.sentences[0].text
         mutated = (re.sub(r"\d+", lambda m: str(int(m.group()) + 7), text, count=1) if re.search(r"\d", text)
                    else text.replace(" must ", " may ", 1))
         if mutated == text:
             continue
         mutable += 1
-        caught += not sentence_grounded(mutated, passages)
+        caught += not sentence_grounded(mutated, hit_passages)
     results["groundedness_control"] = {"n": mutable, "alteration_detected": caught, "n_answered": len(answered)}
 
     # injection: user-side (adversarial questions vs their clean twins) with defence off and on

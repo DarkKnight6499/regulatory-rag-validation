@@ -100,20 +100,20 @@
     "note": "eCFR point-in-time version 2026-10-01"
   },
   {
-    "doc_id": "sr11-7",
-    "title": "SR 11-7 Attachment: Supervisory Guidance on Model Risk Management (April 4, 2011)",
-    "file": "sr11-7.md",
+    "doc_id": "sr26-2",
+    "title": "SR 26-2 Attachment: Supervisory Guidance on Model Risk Management (April 17, 2026)",
+    "file": "sr26-2.md",
     "source_urls": [
-      "https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf"
+      "https://www.federalreserve.gov/supervisionreg/srletters/SR2602a1.pdf"
     ],
-    "retrieved": "2026-10-12",
+    "retrieved": "2026-10-13",
     "raw_sha256": [
-      "0046c0e4eb705830d43312da000271655000beb2a349e1cc3802815638c62cc0"
+      "209ce4c14cea8aab3dc2f27bae1293efb6e1b60f9577a68d9595f85e4b94b0af"
     ],
-    "sha256": "ea1bd6436620950b8cbf08c31c246ed39d32dce045667cc14bc30fb937418457",
-    "chars": 63935,
+    "sha256": "ca8d77ff6514f1058a260af60c955d95b8b7292966326342a1b2a7c42c9424b2",
+    "chars": 20735,
     "status": "ok",
-    "note": "text extracted with PyMuPDF (markitdown reordered footnotes into the body); footnotes dropped, paragraphs rebuilt, contents page removed"
+    "note": "text extracted with PyMuPDF; footnotes moved out of the body, paragraphs rebuilt; supersedes SR 11-7 and SR 21-8"
   },
   {
     "doc_id": "fr2052a-instructions",
