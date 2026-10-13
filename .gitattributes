@@ -1,0 +1,2 @@
+data/corpus/* -text
+data/eval/* -text

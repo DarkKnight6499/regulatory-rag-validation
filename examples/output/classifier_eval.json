@@ -1,0 +1,448 @@
+{
+  "n_clauses": 773,
+  "label_counts": {
+    "liquidity_buffer": 278,
+    "capital": 221,
+    "reporting": 141,
+    "model_governance": 49,
+    "model_validation": 34,
+    "liquidity_risk_management": 28,
+    "stress_testing": 22
+  },
+  "labels": [
+    "model_governance",
+    "model_validation",
+    "liquidity_buffer",
+    "liquidity_risk_management",
+    "stress_testing",
+    "capital",
+    "reporting"
+  ],
+  "label_quality": {
+    "n_reviewed": 100,
+    "agreement": 0.88,
+    "cohen_kappa": 0.8435054773082942,
+    "reviewer_none": 12,
+    "agreement_excluding_none": 1.0,
+    "disagreements": {
+      "count": 12,
+      "by_heuristic_label": {
+        "liquidity_buffer": 12
+      },
+      "by_reviewer_label": {
+        "none": 12
+      }
+    }
+  },
+  "split_sizes": {
+    "train": 469,
+    "val": 150,
+    "test": 154
+  },
+  "split_label_counts": {
+    "train": {
+      "liquidity_buffer": 167,
+      "capital": 135,
+      "reporting": 85,
+      "model_governance": 29,
+      "model_validation": 21,
+      "liquidity_risk_management": 19,
+      "stress_testing": 13
+    },
+    "val": {
+      "liquidity_buffer": 55,
+      "capital": 41,
+      "reporting": 28,
+      "model_governance": 10,
+      "model_validation": 6,
+      "liquidity_risk_management": 5,
+      "stress_testing": 5
+    },
+    "test": {
+      "liquidity_buffer": 56,
+      "capital": 45,
+      "reporting": 28,
+      "model_governance": 10,
+      "model_validation": 7,
+      "liquidity_risk_management": 4,
+      "stress_testing": 4
+    }
+  },
+  "majority_class": {
+    "label": "liquidity_buffer",
+    "accuracy": [
+      0.36363636363636365,
+      0.2857142857142857,
+      0.43506493506493504
+    ],
+    "macro_f1": [
+      0.07619047619047618,
+      0.0634920634920635,
+      0.08889880952380948
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        56,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        28,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "keyword_baseline": {
+    "accuracy": [
+      0.538961038961039,
+      0.461038961038961,
+      0.6168831168831169
+    ],
+    "macro_f1": [
+      0.603643827901531,
+      0.4658138947985316,
+      0.7012787950533697
+    ],
+    "confusion": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        32,
+        0,
+        22,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        23,
+        0,
+        0,
+        0,
+        0,
+        22,
+        0
+      ],
+      [
+        3,
+        0,
+        3,
+        0,
+        1,
+        0,
+        21
+      ]
+    ]
+  },
+  "tfidf_lr": {
+    "accuracy": [
+      0.7922077922077922,
+      0.7272727272727273,
+      0.8571428571428571
+    ],
+    "macro_f1": [
+      0.6836418747469961,
+      0.5631666802876757,
+      0.7966090952698096
+    ],
+    "confusion": [
+      [
+        9,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        42,
+        0,
+        0,
+        10,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        1,
+        23
+      ]
+    ],
+    "C": 0.3
+  },
+  "repeated_splits": {
+    "keyword_baseline": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "accuracy_mean": 0.5585142896891266,
+      "accuracy_sd": 0.07941022062942364,
+      "macro_f1_mean": 0.6131329751657875,
+      "macro_f1_sd": 0.061497054655522264
+    },
+    "tfidf_lr": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "accuracy_mean": 0.7260300715937394,
+      "accuracy_sd": 0.05372865061065743,
+      "macro_f1_mean": 0.6917833983174358,
+      "macro_f1_sd": 0.034285443024618584
+    }
+  },
+  "lora": {
+    "model": "distilbert-base-uncased",
+    "n_seeds": 3,
+    "trainable_params": 743431,
+    "total_params": 67702286,
+    "best_epochs": [
+      8,
+      8,
+      6
+    ],
+    "test_accuracy": [
+      0.6493506493506493,
+      0.7077922077922078,
+      0.6428571428571429
+    ],
+    "test_macro_f1": [
+      0.4803364551490488,
+      0.5544969308614425,
+      0.5003691307031286
+    ],
+    "train_seconds": [
+      455.9,
+      406.4,
+      400.7
+    ],
+    "accuracy_mean": 0.6666666666666666,
+    "macro_f1_mean": 0.5117341722378733,
+    "seed0": {
+      "accuracy": [
+        0.6493506493506493,
+        0.5714285714285714,
+        0.7207792207792207
+      ],
+      "macro_f1": [
+        0.4803364551490488,
+        0.3947467869636334,
+        0.563690038761833
+      ],
+      "confusion": [
+        [
+          8,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          36,
+          0,
+          0,
+          19,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          0,
+          25,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          28
+        ]
+      ]
+    },
+    "lora_config": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.1,
+      "targets": [
+        "q_lin",
+        "v_lin"
+      ]
+    },
+    "lr": 0.0005,
+    "epochs": 8
+  }
+}

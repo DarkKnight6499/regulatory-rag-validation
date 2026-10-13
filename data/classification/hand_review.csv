@@ -1,0 +1,101 @@
+chunk_id,reviewer_label
+"12cfr249:249.1:1",liquidity_buffer
+"12cfr249:249.2:1",liquidity_buffer
+"12cfr249:249.3:0",none
+"12cfr249:249.3:6",none
+"12cfr249:249.3:10",none
+"12cfr249:249.3:15",none
+"12cfr249:249.3:18",none
+"12cfr249:249.3:22",none
+"12cfr249:249.3:32",none
+"12cfr249:249.3:46",none
+"12cfr249:249.3:49",none
+"12cfr249:249.3:52",none
+"12cfr249:249.3:58",none
+"12cfr249:249.3:59",none
+"12cfr249:249.21:4",liquidity_buffer
+"12cfr249:249.22:5",liquidity_buffer
+"12cfr249:249.32:1",liquidity_buffer
+"12cfr249:249.32:5",liquidity_buffer
+"12cfr249:249.32:56",liquidity_buffer
+"12cfr249:249.33:6",liquidity_buffer
+"12cfr249:249.33:9",liquidity_buffer
+"12cfr249:249.33:16",liquidity_buffer
+"12cfr249:249.33:26",liquidity_buffer
+"12cfr249:249.40:1",liquidity_buffer
+"12cfr249:249.50:1",liquidity_buffer
+"12cfr249:249.101:0",liquidity_buffer
+"12cfr249:249.104:7",liquidity_buffer
+"12cfr249:249.106:4",liquidity_buffer
+"12cfr249:249.106:11",liquidity_buffer
+"12cfr249:249.107:7",liquidity_buffer
+"12cfr249:249.109:0",liquidity_buffer
+"12cfr249:249.110:0",liquidity_buffer
+"12cfr249:249.110:1",liquidity_buffer
+"12cfr249:249.110:2",liquidity_buffer
+"12cfr249:249.130:2",reporting
+"12cfr249:249.131:0",reporting
+"12cfr249:249.131:4",reporting
+"12cfr249:249.131:11",reporting
+"12cfr249:249.131:14",reporting
+"12cfr252-d:252.31:2",liquidity_risk_management
+"12cfr252-d:252.34:12",liquidity_risk_management
+"12cfr252-d:252.35:1",stress_testing
+"12cfr252-d:252.35:4",stress_testing
+"12cfr252-e:252.43:0",stress_testing
+"12cfr217-b:217.10:0",capital
+"12cfr217-b:217.10:3",capital
+"12cfr217-b:217.10:8",capital
+"12cfr217-b:217.10:12",capital
+"12cfr217-b:217.10:13",capital
+"12cfr217-b:217.10:15",capital
+"12cfr217-b:217.10:24",capital
+"12cfr217-b:217.11:1",capital
+"12cfr217-b:217.11:14",capital
+"12cfr217-b:217.11:15",capital
+"12cfr217-b:217.11:17",capital
+"12cfr217-b:217.11:22",capital
+"12cfr217-b:217.11:30",capital
+"12cfr217-b:217.11:38",capital
+"12cfr217-b:217.12:12",capital
+"12cfr217-c:217.20:8",capital
+"12cfr217-c:217.20:11",capital
+"12cfr217-c:217.20:14",capital
+"12cfr217-c:217.20:33",capital
+"12cfr217-c:217.20:34",capital
+"12cfr217-c:217.21:2",capital
+"12cfr217-c:217.21:3",capital
+"12cfr217-c:217.21:8",capital
+"12cfr217-c:217.22:5",capital
+"12cfr217-c:217.22:21",capital
+"12cfr217-c:217.22:23",capital
+"12cfr217-c:217.22:24",capital
+"12cfr217-c:217.22:32",capital
+"12cfr217-c:217.22:35",capital
+"12cfr217-c:217.22:40",capital
+"12cfr217-c:217.22:42",capital
+"12cfr217-d-excerpt:217.32:1",capital
+"12cfr217-d-excerpt:217.32:7",capital
+"12cfr217-d-excerpt:217.32:13",capital
+"12cfr217-d-excerpt:217.32:20",capital
+"12cfr217-d-excerpt:217.32:29",capital
+"sr11-7:II:3",model_governance
+"sr11-7:III:14",model_governance
+"sr11-7:IV:20",model_governance
+"sr11-7:V:29",model_validation
+"sr11-7:V:31",model_validation
+"sr11-7:V:47",model_validation
+"sr11-7:V:49",model_validation
+"sr11-7:V:52",model_validation
+"sr11-7:VI:70",model_governance
+"sr11-7:VI:71",model_governance
+"fr2052a-instructions:FR 2052a Instructions:2",reporting
+"fr2052a-instructions:FR 2052a Instructions:7",reporting
+"fr2052a-instructions:FR 2052a Instructions:17",reporting
+"fr2052a-instructions:FR 2052a Instructions:23",reporting
+"fr2052a-instructions:FR 2052a Instructions:38",reporting
+"fr2052a-instructions:FR 2052a Instructions:43",reporting
+"fr2052a-instructions:FR 2052a Instructions:45",reporting
+"fr2052a-instructions:FR 2052a Instructions:47",reporting
+"fr2052a-instructions:FR 2052a Instructions:78",reporting
+"fr2052a-instructions:FR 2052a Instructions:82",reporting

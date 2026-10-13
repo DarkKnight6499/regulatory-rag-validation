@@ -1,0 +1,134 @@
+[
+  {
+    "doc_id": "12cfr249",
+    "title": "12 CFR Part 249 Liquidity Risk Measurement, Standards, and Monitoring (Regulation WW)",
+    "file": "12cfr249.md",
+    "source_urls": [
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=249"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "5588acca2f35ff491c93dc67f39783797505e2ac3a9b32d90c4c8bd799af38b6"
+    ],
+    "sha256": "53b5d13de63312aa79ef34ee4fe1e6084c0b4f05279c805c9a4df161c25507ad",
+    "chars": 197011,
+    "status": "ok",
+    "note": "eCFR point-in-time version 2026-10-01"
+  },
+  {
+    "doc_id": "12cfr252-d",
+    "title": "12 CFR Part 252 Subpart D Enhanced Prudential Standards for BHCs with $100 billion or more (incl. liquidity, 252.34 and 252.35)",
+    "file": "12cfr252-d.md",
+    "source_urls": [
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=252&subpart=D"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "b77df69b64a6ca524421333f6b3b713ecda55123d44be72906b428035e3ddf8d"
+    ],
+    "sha256": "da8216e33c6a2e2d019e503848da8da304e82c143ad6d149e2ee922cc2a7c5f6",
+    "chars": 32238,
+    "status": "ok",
+    "note": "eCFR point-in-time version 2026-10-01"
+  },
+  {
+    "doc_id": "12cfr252-e",
+    "title": "12 CFR Part 252 Subpart E Supervisory Stress Test Requirements",
+    "file": "12cfr252-e.md",
+    "source_urls": [
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=252&subpart=E"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "f695a7268a67207ff96ad1b6532814b3360279b0e66870a8d092593e10b7cb3f"
+    ],
+    "sha256": "8f63e6a2d74ba0a88368a3df5b1d095dea867ccbe54fe164fbd1f294ed71b7bc",
+    "chars": 13335,
+    "status": "ok",
+    "note": "eCFR point-in-time version 2026-10-01"
+  },
+  {
+    "doc_id": "12cfr217-b",
+    "title": "12 CFR Part 217 Subpart B Capital Ratio Requirements and Buffers",
+    "file": "12cfr217-b.md",
+    "source_urls": [
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=217&subpart=B"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "b8f3760f022cf4af3547247657dc1498e5a28014157039b900d6474728cc604a"
+    ],
+    "sha256": "bc74c09539e443c87b36d3d595706ee7b2d71b768983d3b0c86a1de954080474",
+    "chars": 60412,
+    "status": "ok",
+    "note": "eCFR point-in-time version 2026-10-01"
+  },
+  {
+    "doc_id": "12cfr217-c",
+    "title": "12 CFR Part 217 Subpart C Definition of Capital",
+    "file": "12cfr217-c.md",
+    "source_urls": [
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=217&subpart=C"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "84bf07900a1f2f721f6f56ed125069f3230b9426af1820bd122647db4d0a0555"
+    ],
+    "sha256": "7c913a2cd578eb6ee9c0a34fa1a5130b593859e37e5abf01002667501dc7e542",
+    "chars": 71906,
+    "status": "ok",
+    "note": "eCFR point-in-time version 2026-10-01"
+  },
+  {
+    "doc_id": "12cfr217-d-excerpt",
+    "title": "12 CFR Part 217 Subpart D excerpt: 217.30, 217.31, 217.32 (standardized approach risk weights)",
+    "file": "12cfr217-d-excerpt.md",
+    "source_urls": [
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=217&section=217.30",
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=217&section=217.31",
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-10-01/title-12.xml?part=217&section=217.32"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "2ae989bc248d3f975aa4460b396686bae0449f35adeafba10ae83062c48b7150",
+      "22abe088b84059e7d6dad4c5e83fc55897f4cd7c54bbe47e54acbf821eb05638",
+      "f2611630df5ea4141bbeae737394e9fe99f0b881ba4f824f21b5980eb93e837a"
+    ],
+    "sha256": "33707881f596fa82175af1dc6f81f36e14a475ed8633ef09f99732ae26bd7013",
+    "chars": 18833,
+    "status": "ok",
+    "note": "eCFR point-in-time version 2026-10-01"
+  },
+  {
+    "doc_id": "sr11-7",
+    "title": "SR 11-7 Attachment: Supervisory Guidance on Model Risk Management (April 4, 2011)",
+    "file": "sr11-7.md",
+    "source_urls": [
+      "https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "0046c0e4eb705830d43312da000271655000beb2a349e1cc3802815638c62cc0"
+    ],
+    "sha256": "ea1bd6436620950b8cbf08c31c246ed39d32dce045667cc14bc30fb937418457",
+    "chars": 63935,
+    "status": "ok",
+    "note": "text extracted with PyMuPDF (markitdown reordered footnotes into the body); footnotes dropped, paragraphs rebuilt, contents page removed"
+  },
+  {
+    "doc_id": "fr2052a-instructions",
+    "title": "FR 2052a Instructions (version dated 2022-04-29, General Instructions and Field Definitions only)",
+    "file": "fr2052a-instructions.md",
+    "source_urls": [
+      "https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf"
+    ],
+    "retrieved": "2026-10-12",
+    "raw_sha256": [
+      "cbe13914f75c6cf45b45a13d840ff91c5e232c3bca229dc574479e48d580a19d"
+    ],
+    "sha256": "347a35655101ce5175996977e3f89eb4eeecc3bb501560d21d039037d04a84ab",
+    "chars": 48359,
+    "status": "ok",
+    "note": "product definition tables omitted; the 2022 version may not be the current form"
+  }
+]
